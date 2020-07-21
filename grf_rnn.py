@@ -8,7 +8,7 @@ from keras.layers import SimpleRNN, Dense
 data = np.genfromtxt('Schreiber08_IK_grf.csv', delimiter = ',') # numpy.ndarray, (3814, 45)
 
 #Divide the data into 4 batches according to the trial no.
-#The batches (1 array for angles and 1 for GRF) are initialized as empty lists, but replaced with np.ndarrays later
+#The batches are initialized as empty lists, but replaced with np.ndarrays later
 angles1 = []
 angles2 = []
 angles3 = []
