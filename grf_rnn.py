@@ -89,11 +89,10 @@ print("reshaped: ", train.shape)
 grf = np.vstack((grf1, grf2))
 grf = np.vstack((grf, grf3))
 print("grf shape: ", grf.shape)
-'''goal = np.reshape(grf, (grf.shape[0], grf.shape[1], 1))'''
 goal = np.reshape(grf, (1, grf.shape[0], grf.shape[1]))
 print("reshaped: ", goal.shape)
 
-#one set of angles and grf for testing
+#one set of angles and grf for evaluation
 test_angles = np.reshape(angles4, (1, angles4.shape[0], angles4.shape[1]))
 test_grf = np.reshape(grf4, (1, grf4.shape[0], grf4.shape[1]))
 
@@ -118,4 +117,3 @@ if True:
 
     print("evaluating...")
     results = model.evaluate(test_angles, test_grf, batch_size= BATCH_SIZE)
-
